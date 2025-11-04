@@ -1,5 +1,5 @@
 import apiClient from "./axiosConfig";
-import type { User } from "../types/types";
+import type { User } from "@/types/types";
 import { AxiosError } from "axios";
 
 export const authService = {
