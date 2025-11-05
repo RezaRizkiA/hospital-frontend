@@ -1,5 +1,5 @@
 import apiClient from "./axiosConfig";
-import type { User } from "../types/types";
+import type { User } from "@/types/types";
 import { AxiosError } from "axios";
 
 export const authService = {
@@ -43,9 +43,9 @@ export const authService = {
   logout: async (): Promise<void> => {
     try {
       await apiClient.post("/logout");
-      window.location.href = "/";
     } catch (error) {
       console.error("Logout failed:", error);
+      throw error;
     }
   },
 };
