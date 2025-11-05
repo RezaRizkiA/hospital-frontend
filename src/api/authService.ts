@@ -43,9 +43,9 @@ export const authService = {
   logout: async (): Promise<void> => {
     try {
       await apiClient.post("/logout");
-      window.location.href = "/";
     } catch (error) {
       console.error("Logout failed:", error);
+      throw error;
     }
   },
 };

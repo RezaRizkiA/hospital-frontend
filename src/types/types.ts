@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 export interface Role {
   id: number;
   name: string;
@@ -12,4 +14,8 @@ export interface User {
   gender: string;
   roles?: Role[];
   token?: string;
+}
+
+export interface AuthProviderProps{
+  children: ReactNode;
 }
